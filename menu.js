@@ -59,4 +59,4 @@ function parseCSV(data) {
 }
 
 // Загрузка данных из CSV
-loadMenuItemsFromCSV('breakfast.csv', 'menu-items');
+loadMenuItemsFromCSV('csv/breakfast.csv', 'menu-items');
