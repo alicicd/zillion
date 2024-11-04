@@ -57,12 +57,3 @@ function parseCSV(data) {
     }
     return items;
 }
-
-// Загрузка данных из разных CSV-файлов для каждой категории
-loadMenuItemsFromCSV('csv/breakfast.csv', 'breakfast-items');
-loadMenuItemsFromCSV('csv/cold_appetizers.csv', 'cold-appetizers-items');
-loadMenuItemsFromCSV('csv/hot_appetizers.csv', 'hot-appetizers-items');
-loadMenuItemsFromCSV('csv/beer_appetizers.csv', 'beer-appetizers-items');
-loadMenuItemsFromCSV('csv/salads.csv', 'salads-items');
-loadMenuItemsFromCSV('csv/soups.csv', 'soups-items');
-loadMenuItemsFromCSV('csv/kids_menu.csv', 'kids-menu-items');
