@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню Zillion - Категория</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="logo.png" alt="Zillion Logo" width="180">
+            <h1 id="category-title">Категория</h1>
+            <a href="index.html" class="back-link">← Вернуться к категориям</a>
+        </header>
+
+        <div id="menu-items" class="menu-category"></div>
+
+        <footer class="footer">
+            <p>+7 777 3000 07 07 | @zillion.restobar</p>
+            <p>Цены указаны в тенге. Сервис 10%</p>
+            <p>Если у Вас есть аллергия на что-либо, пожалуйста, предупредите официанта</p>
+            <img src="footer.png" alt="Footer Icon" width="100">
+        </footer>
+    </div>
+
+    <script src="menu.js"></script>
+    <script>
+        // Функция для получения параметра "category" из URL
+        function getCategoryFromUrl() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get("category");
+        }
+
+        // Отображение категории и загрузка соответствующего CSV-файла
+        const category = getCategoryFromUrl();
+        const categoryTitleMap = {
+            "breakfast": "Завтраки",
+            "cold_appetizers": "Холодные закуски",
+            "hot_appetizers": "Горячие закуски",
+            "salads": "Салаты",
+            "soups": "Супы",
+            "kids_menu": "Детское меню" ,
+            "main_courses": "Основные блюда",
+            "company_dishes": "Блюда на компанию",
+            "pasta": "Паста",
+            "grill": "На углях",
+            "rolls": "Роллы" ,
+            "garnishes": "Гарниры",
+            "sauces": "Соусы",
+            "desserts": "Десерты",
+            "drinks": "Напитки",
+            "wine": "Вино и крепкие напитки"
+    
+        };
+
+        if (category && categoryTitleMap[category]) {
+            document.getElementById("category-title").textContent = categoryTitleMap[category];
+            loadMenuItemsFromCSV(`csv/${category}.csv`, 'menu-items');
+        } else {
+            document.getElementById("category-title").textContent = "Категория не найдена";
+            console.error("Категория не найдена или указана неверно в URL.");
+        }
+    </script>
+</body>
+</html>
