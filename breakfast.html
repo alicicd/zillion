@@ -15,30 +15,8 @@
             <a href="index.html" class="back-link">← Вернуться к категориям</a>
         </header>
 
-        <div class="menu-category">
-            <div class="dish-card">
-                <div class="dish-info">
-                    <h2 class="dish-name">Шакшука</h2>
-                    <p class="dish-description">Классическое восточное блюдо с томатами и яйцом.</p>
-                </div>
-                <div class="dish-price">2800</div>
-            </div>
-            <div class="dish-card">
-                <div class="dish-info">
-                    <h2 class="dish-name">Скандинавский завтрак</h2>
-                    <p class="dish-description">Омлет с малосольным лососем, панкейками, миксом салатов, сливочным сыром и соусом гуакамоле.</p>
-                </div>
-                <div class="dish-price">3200</div>
-            </div>
-            <div class="dish-card">
-                <div class="dish-info">
-                    <h2 class="dish-name">Английский завтрак</h2>
-                    <p class="dish-description">Глазунья с баварскими колбасками, маринованными шампиньонами, фасолью в томатном соусе и тостерным хлебом.</p>
-                </div>
-                <div class="dish-price">3000</div>
-            </div>
-            <!-- Другие блюда -->
-        </div>
+        <!-- Контейнер для отображения позиций меню -->
+        <div id="menu-items" class="menu-category"></div>
 
         <footer class="footer">
             <p>+7 777 3000 07 07 | @zillion.restobar</p>
@@ -47,5 +25,8 @@
             <img src="footer.png" alt="Footer Icon" width="100">
         </footer>
     </div>
+
+    <!-- JavaScript для загрузки CSV данных -->
+    <script src="menu.js"></script>
 </body>
 </html>
